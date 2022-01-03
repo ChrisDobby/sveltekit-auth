@@ -6,10 +6,13 @@
     "url": "git+https://github.com/chrisdobby/sveltekit-auth.git"
   },
   "author": "ChrisDobby",
-  "license": "ISC",
+  "license": "MIT",
   "private": true,
   "workspaces": [
     "packages/*",
     "demo"
-  ]
+  ],
+  "scripts": {
+    "prepare": "husky install"
+  }
 }
