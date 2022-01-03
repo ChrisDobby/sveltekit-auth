@@ -1,7 +1,8 @@
 import type { EndpointOutput, LoadInput, Load, Page, Handle, GetSession, Request } from "@sveltejs/kit";
 import type { ServerRequest } from "@sveltejs/kit/types/hooks";
 import cookie from "cookie";
-import { Config, getAuthUrl, RetrieveTokenArgs, getTokenFetchArgs } from "./config";
+import { getAuthUrl, getTokenFetchArgs } from "./config";
+import type { Config, RetrieveTokenArgs } from "./types";
 import resilientFetch from "./resilientFetch";
 
 type Auth = {

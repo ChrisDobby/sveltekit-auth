@@ -2,7 +2,7 @@ import { AuthProvider } from "sveltekit-auth";
 import type { Config } from "sveltekit-auth";
 import cookie from "cookie";
 
-const getCustomCookies = (token: any): string[] => {
+const getCustomCookies = (token: { athlete?: object }): string[] => {
     const { athlete } = token;
     return athlete ? [cookie.serialize("strava_athlete", JSON.stringify(athlete), { path: "/", httpOnly: true })] : [];
 };
